@@ -1,8 +1,8 @@
 app = "rincon-bus-bot"
-primary_region = "mad"
+primary_region = "cdg"
 
 [build]
-  # Uses Dockerfile in repo root
+  # uses Dockerfile
 
 [env]
   TZ = "Europe/Madrid"
@@ -10,11 +10,10 @@ primary_region = "mad"
   DEFAULT_LINEA = "19"
   GEOFENCE_METERS = "500"
 
-# Run as a long-lived worker (no HTTP needed)
+# Run as a long-lived worker (no HTTP)
 [processes]
   app = "bash -lc 'mkdir -p /data && python main.py'"
 
-# Persist SQLite on a volume
 [mounts]
   source = "data"
   destination = "/data"
