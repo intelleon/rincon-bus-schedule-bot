@@ -1,0 +1,89 @@
+API Documentation
+https://api.ctan.es/doc
+
+Todos los concorcios:
+http://api.ctan.es/v1/Consorcios/1/consorcios
+{
+      "idConsorcio": "4",
+      "nombre": "Área de Málaga",
+      "nombreCorto": "CTMAM"
+}
+
+Todos los municipios en concorcio:
+http://api.ctan.es/v1/Consorcios/4/municipios/
+{
+   "idMunicipio": "4",
+   "datos": "Rincón de la Victoria"
+}
+
+
+Todos los nucleos en concorcio:
+http://api.ctan.es/v1/Consorcios/4/nucleos
+{
+  "idNucleo": "1",
+  "idMunicipio": "1",
+  "idZona": "A",
+  "nombre": "Málaga"
+},
+{
+      "idNucleo": "57",
+      "idMunicipio": "4",
+      "idZona": "B",
+      "nombre": "Rincón de la Victoria"
+},
+{
+      "idNucleo": "58",
+      "idMunicipio": "4",
+      "idZona": "B",
+      "nombre": "Cotomar"
+}
+
+Todos las lineas de consorcio
+http://api.ctan.es/v1/Consorcios/4/lineas
+{
+      "idLinea": "19",
+      "codigo": "M-160",
+      "nombre": "Málaga-Rincón De La Victoria-Cotomar",
+      "hayNoticia": "0",
+      "modo": "Autobús",
+      "idModo": "1",
+      "operadores": "Avanza Movilidad Integral, S.L., ",
+      "observacionesModoTransporte": null
+}
+
+http://api.ctan.es/v1/Consorcios/4/horarios_origen_destino?destino=58&lang=ES&origen=1
+
+
+
+Horario Malaga-Cotomar(Gran Sol) - todos los autobuses
+http://api.ctan.es/v1/Consorcios/4/horarios_origen_destino?destino=57&lang=ES&origen=1
+
+
+
+
+
+
+
+http://api.ctan.es/v1/Consorcios/4/nucleos/57/lineas
+
+https://siu.ctmam.ctan.es/docs/term/t19i.png
+
+https://siu.ctmam.ctan.es/docs/term/t19v.png
+
+
+
+Bloques de paso:
+http://api.ctan.es/v1/Consorcios/4/lineas/19/bloques?sentido=1
+{
+      "idBloque": "16",
+      "idLinea": "19",
+      "sentido": "1",
+      "nombre": "Rincón de la Victoria",
+      "color": "#ffa53c",
+      "orden": "16"
+}
+
+
+https://news.google.com/rss/search?q=Rincon+de+la+Victoria&hl=es&gl=ES&ceid=ES:es
+
+https://news.google.com/rss/search?q=3I/Atlas&hl=ru&gl=ES&ceid=RU:ru
