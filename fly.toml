@@ -1,0 +1,25 @@
+app = "rincon-bus-bot"
+primary_region = "mad"
+
+[build]
+  # Uses Dockerfile in repo root
+
+[env]
+  TZ = "Europe/Madrid"
+  DB_PATH = "/data/bus_reports.db"
+  DEFAULT_LINEA = "19"
+  GEOFENCE_METERS = "500"
+
+# Run as a long-lived worker (no HTTP needed)
+[processes]
+  app = "bash -lc 'mkdir -p /data && python main.py'"
+
+# Persist SQLite on a volume
+[mounts]
+  source = "data"
+  destination = "/data"
+
+[vm]
+  memory = "512mb"
+  cpu_kind = "shared"
+  cpus = 1
